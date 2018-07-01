@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PersonalWebsite.Models;
 
 namespace PersonalWebsite.Controllers
 {
@@ -20,11 +21,11 @@ namespace PersonalWebsite.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Projects()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your projects page.";
 
-            return View();
+            return RedirectToAction("Index", "Projects");
         }
     }
 }
