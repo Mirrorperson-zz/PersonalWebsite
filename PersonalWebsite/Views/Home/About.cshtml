@@ -1,7 +1,13 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "About Rabindra Thapa";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<img src='@Url.Content("~/Content/Images/MyPicture.jpg")' class="img-thumbnail img-floatRight"/>
+<h2>@ViewBag.Title</h2>
 
-<p>Use this area to provide additional information.</p>
+<p>The sense of satisfaction and achievement gained from identifying problems and developing solutions to address them is what motivates my work.</p>
+
+<p>I graduated from Swansea University with a Bsc in Software engineering.</p>
+
+<div class="divTopMargin">
+ @Html.Partial("~/Views/Home/_Contact.cshtml")
+</div>
