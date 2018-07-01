@@ -29,5 +29,7 @@ namespace PersonalWebsite.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<PersonalWebsite.Models.ProjectModel> ProjectModels { get; set; }
     }
 }
