@@ -1,0 +1,49 @@
+﻿.funkyColor {
+  background-color: white;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #6db29d 10px, #6db29d 20px),
+      repeating-linear-gradient(315deg, transparent, transparent 10px, #6db29d 10px, #6db29d 20px),
+      linear-gradient(to bottom, #a19fdc, #6da1b2);
+  background-size: 50px 25px;
+}
+.fullLength {
+    width: 100%;
+}
+.divTopMargin {
+    margin-top: 40px;
+}
+.closeHeader{
+    margin-bottom: 5px;
+}
+.formMargin {
+    margin-top: 10px;
+}
+.longTextbox {
+    max-width: -webkit-fill-available;
+    width: 800px;
+}
+div textarea.textAreaHeight {
+    height: 250px;
+}
+body {
+    margin: 0;
+}
+html, body, #canvas {
+width: 100%;
+height: 100%;
+}
+.projectsTitleWidth {
+    width: 30%;
+}
+.projectsDescWidth {
+    width: 70%;
+}
+.validationMsg {
+    display: block;
+}
+.validationWarning {
+    color: red;
+}
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
