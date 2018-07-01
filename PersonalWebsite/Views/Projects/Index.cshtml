@@ -1,0 +1,39 @@
+﻿@model IEnumerable<PersonalWebsite.Models.ProjectModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Projects</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "Projects", new { @class="btn-xl js-scroll-trigger" })
+</p>
+<table class="table">
+    <tr>
+        <th class="projectsTitleWidth">Name</th>
+        <th class="projectsDescWidth">Description</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @if (item.projectTitle != null && item.projectTitle != "")
+            {
+                @Html.Label(item.projectTitle, item.projectTitle, new { @class = "projectsTitleWidth" });
+            }
+        </td>
+        <td>
+            @if(item.projectDescription != null && item.projectDescription != "")
+            {
+                @Html.Label(item.projectDescription, item.projectDescription, new { @class = "projectsDescWidth" });
+            }
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+        </td>
+        
+    </tr>
+}
+
+</table>
