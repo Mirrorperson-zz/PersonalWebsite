@@ -7,12 +7,12 @@ namespace PersonalWebsite.Migrations
     {
         public override void Up()
         {
-            AlterColumn("dbo.ProjectModels", "projectTitle", c => c.String(nullable: false));
+            AlterColumn("dbo.ProjectModels", "ProjectTitle", c => c.String(nullable: false));
         }
         
         public override void Down()
         {
-            AlterColumn("dbo.ProjectModels", "projectTitle", c => c.String());
+            AlterColumn("dbo.ProjectModels", "ProjectTitle", c => c.String());
         }
     }
 }
