@@ -6,11 +6,11 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
 
     <!-- OwlCarousel -->
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
 </head>
 <body>
-    <canvas id="canvas" style="z-index: -50; position: absolute; top: 0px; left: 0px; width: -webkit-fill-available; height: -webkit-fill-available" ></canvas>
+    <canvas id="canvas"></canvas>
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -41,11 +41,10 @@
         @Scripts.Render("~/bundles/bootstrap")
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
-        <!-- Background animation ocanvas -->
+        <!-- Background animation ocanvas & OwlCarousel plugin called in backgroundAnimation.js -->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.9/ocanvas.min.js"></script>
+        <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
         @Scripts.Render("~/Scripts/backgroundAnimation.js")
-        <!-- OwlCarousel plugin called in backgroundAnimation.js -->
-        <script src="owlcarousel/owl.carousel.min.js"></script>
         @RenderSection("scripts", required: false)
 </body>
 </html>
