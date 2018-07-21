@@ -3,11 +3,13 @@
     // OwlCarousel
     $(".owl-carousel").owlCarousel({
         navigation: true, // Show next and prev buttons
-        slideSpeed: 300,
-        paginationSpeed: 400,
+        slideSpeed: 200,
+        paginationSpeed: 200,
+        items: 1,
         singleItem: true
     });
 
+    // Background Animation
     var windowXArray = [],
         windowYArray = [];
 
