@@ -1,12 +1,18 @@
 ﻿@{
-    ViewBag.Title = "About Rabindra Thapa";
+    ViewBag.Title = "About Me";
 }
 <img src='@Url.Content("~/Content/Images/MyPicture.jpg")' class="img-thumbnail img-floatRight"/>
 <h2>@ViewBag.Title</h2>
 
-<p>The sense of satisfaction and achievement gained from identifying problems and developing solutions to address them is what motivates my work.</p>
+<div style="width: 75%;" >
+    What motivates me most is the sense of satisfaction and accomplisment I get from completing projects.</br></br>
 
-<p>I graduated from Swansea University with a Bsc in Software engineering.</p>
+    <h4>Education</h4>
+    I graduated from Swansea University in 2017 with a Bsc in Software engineering.</br></br>
+
+    <h4>Work History</h4>
+    Since August 2018 I've been working as a junior software engineer at AtomGroup. Their website is MasterOfMalt.com and their main buiness is as an online alcoholic beverages retailer.
+</div>
 
 <div class="divTopMargin">
  @Html.Partial("~/Views/Home/_Contact.cshtml")
