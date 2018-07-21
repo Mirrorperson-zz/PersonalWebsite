@@ -12,25 +12,39 @@
 <table class="table">
     <tr>
         <th class="projectsTitleWidth">Name</th>
-        <th class="projectsDescWidth">Description</th>
+        <th class="projectsIconWidth">Icon</th>
+        <th>Description</th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @if (item.projectTitle != null && item.projectTitle != "")
+            @if (!String.IsNullOrEmpty(item.ProjectTitle))
             {
-                @Html.Label(item.projectTitle, item.projectTitle, new { @class = "projectsTitleWidth" });
+                @Html.Label(item.ProjectTitle, item.ProjectTitle, new { @class = "projectsTitleWidth" });
             }
         </td>
         <td>
-            @if(item.projectDescription != null && item.projectDescription != "")
+            @if (!String.IsNullOrEmpty(item.ProjectIcon))
             {
-                @Html.Label(item.projectDescription, item.projectDescription, new { @class = "projectsDescWidth" });
+                <img class="projectsIconWidth" src="@item.ProjectIcon" />
             }
-            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+        </td>
+        <td>
+            @if(!String.IsNullOrEmpty(item.ProjectDescription))
+            {
+                @Html.Label(item.ProjectDescription, item.ProjectDescription, new { @class = "projectsDescWidth" });
+            }
+            @if (Request.IsAuthenticated)
+            {
+                <br/>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id });
+                @Html.Raw(" | ")
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id });
+                @Html.Raw(" | ")
+            }
+            @Html.ActionLink("Details", "Details", new { id = item.Id })
+            
         </td>
         
     </tr>

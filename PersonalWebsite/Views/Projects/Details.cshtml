@@ -4,15 +4,20 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
 <div>
-    <h4>ProjectModel</h4>
-    <hr />
+    <br />
+    @Html.DisplayFor(model => model.ProjectTitle)
+    <br /><br />
+    @Html.DisplayFor(model => model.ProjectDescription)
+    <br /><br />
+    <img class="contained" src="@Model.ProjectIcon" />
     <dl class="dl-horizontal">
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @if (Request.IsAuthenticated)
+    {
+        Html.ActionLink("Edit", "Edit", new { id = Model.Id });
+    }
     @Html.ActionLink("Back to List", "Index")
 </p>

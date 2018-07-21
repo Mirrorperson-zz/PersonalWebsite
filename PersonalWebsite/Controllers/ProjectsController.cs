@@ -46,7 +46,7 @@ namespace PersonalWebsite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id, projectTitle, projectDescription")] ProjectModel projectModel)
+        public ActionResult Create([Bind(Include = "Id, ProjectTitle, ProjectDescription")] ProjectModel projectModel)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace PersonalWebsite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id")] ProjectModel projectModel)
+        public ActionResult Edit([Bind(Include = "Id, ProjectTitle, ProjectDescription, ProjectIcon")] ProjectModel projectModel)
         {
             if (ModelState.IsValid)
             {
