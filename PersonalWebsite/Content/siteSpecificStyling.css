@@ -27,15 +27,15 @@ div textarea.textAreaHeight {
 body {
     margin: 0;
 }
-html, body, #canvas {
-width: 100%;
-height: 100%;
+#canvas {
+    position: fixed;
+    z-index: -50;
 }
 .projectsTitleWidth {
-    width: 30%;
+    width: auto;
 }
-.projectsDescWidth {
-    width: 70%;
+.projectsIconWidth {
+    width: 150px;
 }
 .validationMsg {
     display: block;
@@ -46,4 +46,31 @@ height: 100%;
 @keyframes animatedBackground {
 	from { background-position: 0 0; }
 	to { background-position: 100% 0; }
+}
+form textarea, form img {
+    width: 100%;
+}
+form textarea {
+    max-width: unset;
+}
+.contained {
+    max-width: 100%;
+}
+.owl-theme .owl-dots .owl-dot.active span {
+    background-color: lime;
+    border: 2px solid black;
+}
+.owl-theme .owl-dots .owl-dot span {
+    border: 2px solid black;
+}
+hr {
+    margin-bottom: 0;
+}
+.jumbotron {
+    margin-bottom: 0;
+}
+.img-thumbnail {
+    margin-top: 20px;
+    border-color: #7d9da9;
+    background-color: transparent;
 }
