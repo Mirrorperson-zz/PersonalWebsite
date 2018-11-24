@@ -240,3 +240,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+# Hosting notes
+HostingNgrokIisExpress.txt
